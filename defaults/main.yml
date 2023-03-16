@@ -1,0 +1,10 @@
+---
+# defaults file for adrianjuhl.msteams
+
+adrianjuhl__msteams__filename: "teams_1.5.00.23861_amd64.deb"
+
+adrianjuhl__msteams__source_directory: "https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams"
+# "http://archive.apache.org/dist/maven/maven-{{ adrianjuhl__maven__version_major }}/{{ adrianjuhl__maven__version }}/binaries"
+
+adrianjuhl__msteams__download_directory: "{{ ansible_env.HOME }}/.ansible/tmp/downloads/msteams"
+

@@ -1,0 +1,23 @@
+---
+# tasks file for adrianjuhl.msteams
+
+# https://web.archive.org/web/20221130115842/https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/
+
+- name: Create download directory
+  file:
+    dest: "{{ adrianjuhl__msteams__download_directory }}"
+    state: directory
+    mode: "u=rwx,go=rx"
+
+#- name: Download msteams
+#  get_url:
+#    url: "{{ adrianjuhl__msteams__source_directory }}/{{ adrianjuhl__msteams__filename }}"
+#    dest: "{{ adrianjuhl__msteams__download_directory }}"
+#    force: no
+#    mode: "u=rw,go=r"
+
+- name: Install msteams
+  ansible.builtin.apt:
+    deb: "{{ adrianjuhl__msteams__source_directory }}/{{ adrianjuhl__msteams__filename }}"
+
+
